@@ -1,10 +1,6 @@
 body{
   margin: 0;
 }
-#heroimage {
-  background-color: #0B1331;
-  height: 136px;
-}
 
 #heroimage h1 {
   font-weight: 500;
@@ -52,43 +48,67 @@ nav{
 
 /* Hero Image */
 
-#hi {
-  min-height: 300px;
-  height: 45vh;
+#heroGrid {
   background-color: #0B1331;
-  }
+  height: 100vh;
+  padding: 5vh;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-auto-rows: 58vh;
+  grid-template-areas:
+  "headline heroimage"
+  ;
+}
+
+#headline {
+  grid-area: headline;
+  color: #89E3FF;
+
+}
+#heroimage {
+  grid-area: heroimage;
+  background-image: url("../images/pro.jpg");
+}
 
 #headline {
   color: white;
-  position: absolute;
-  left: 75px;
-  top: 120px;
   padding: 10px;
-  max-width: 550px;
-  z-index: 100;
 }
 
-.profile {
-  height: 72vh;
-  width: 66vh;
-  object-fit: cover;
-  object-position: 0 12%;
-  position: absolute;
-  right: 40px;
-  top: 100px;
+#heroimage {
   padding: 25px;
-  max-width: 550px;
-  z-index: 100;
 }
 
-.heroGridArea {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  align-items: center;
-  display: flex;
-  position: relative;
+
+#socialGrid {
+  height: 100vh;
+  padding: 5vh;
+  display: grid;
+  grid-template-columns: 80px 80px 80px;
+  grid-auto-rows: 58vh;
+  grid-template-areas:
+  "in be ig"
+  ;
 }
+
+#LinkedIn {
+  grid-area: in;
+
+}
+#Behance {
+  grid-area: be;
+
+}
+#Instagram {
+  grid-area: ig;
+
+}
+
+
+
+
+
+
 
 .links {
   display: flex;
@@ -237,6 +257,64 @@ nav{
   font-weight: 500;
 }
 
+/* Skills CSS */
+
+#skillGrid {
+  display: grid;
+  margin: 24px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  text-align: center;
+  row-gap: 5vh;
+  column-gap: 5vh;
+  grid-template-areas:
+  "s1 s2 s3"
+  "s4 s5 s6"
+  ;
+}
+
+.skill{
+  background-color: rgba(255,255,255,0.8);
+  color: #000f50;
+  font-size: 18px;
+  font-weight: 500;
+
+}
+
+#skillGrid img{
+  border-radius: 100px;
+}
+
+#skill1 {
+  grid-area: s1;
+
+
+}
+#skill2 {
+  grid-area: s2;
+
+
+}
+#skill3 {
+  grid-area: s3;
+
+
+}
+#skill4 {
+  grid-area: s4;
+
+
+}
+#skill5 {
+  grid-area: s5;
+
+
+}
+#skill6 {
+  grid-area: s6;
+
+
+}
 
 
 /* Typography CSS */
@@ -343,6 +421,102 @@ h3 {
 
 /* Media Queries */
 
-@media only screen and (max-width: 1000px) {}
+@media only screen and (min-width: 1112px) {
+  .hamnav{
+    display: none;
+  }
+}
 
-@media only screen and (max-width: 600px) {}
+@media only screen and (max-width: 1112px) {
+  .topnav{
+    display: none;
+  }
+  .hamnav {
+    float: right;
+    position: absolute;
+    right: 3vw;
+    background-image: url("../images/hamnav.svg");
+  }
+
+
+  #heroGrid {
+    padding-top: 100px;
+    padding-bottom: 70px;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 50vh;
+    grid-template-areas:
+    "headline" 
+    "heroimage"
+  }
+
+  #skillGrid {
+    display: grid;
+    margin: 45px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    text-align: center;
+    row-gap: 5vh;
+    column-gap: 3vw;
+    grid-template-areas:
+    "s1 s2" 
+    "s3 s4" 
+    "s5 s6"
+  }
+
+}
+
+@media only screen and (max-width: 740px) {
+  #categoryGrid {
+    margin: 0px 5%;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 58vh;
+    grid-template-areas:
+    "project1" 
+    "project2"
+    "project3" 
+    "project4"
+    "project5" 
+    "project6"
+    "project7" 
+    "project8"
+    "project9 "
+    "project10"
+    ;
+  }
+  h1{
+    line-height: 64px;
+  }
+  
+  #heroGrid {
+    padding-top: 20px;
+    padding-bottom: 100px;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 75vh;
+    grid-template-areas:
+    "headline" 
+    "heroimage"
+    ;
+  }
+
+  #skillGrid {
+    display: grid;
+    margin: 45px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+    row-gap: 5vh;
+    column-gap: 3vw;
+    grid-template-areas:
+    "s1" 
+    "s2" 
+    "s3"
+    "s4" 
+    "s5" 
+    "s6"
+    ;
+  }
+
+
+}
