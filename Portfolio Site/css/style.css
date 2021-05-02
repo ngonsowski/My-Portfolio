@@ -7,7 +7,7 @@ body{
 }
 
 nav{
-  width: 100%;
+  width: 100vw;
   height: 130px;
   position: sticky;
   top: 0;
@@ -67,7 +67,7 @@ nav{
 }
 #heroimage {
   grid-area: heroimage;
-  background-image: url("../images/pro.jpg");
+  object-fit: cover;
 }
 
 #headline {
@@ -77,6 +77,13 @@ nav{
 
 #heroimage {
   padding: 25px;
+  
+}
+
+#heroimage img{
+  padding-left: 50px;
+  height: 60vh;
+  width: 60vh;
 }
 
 
@@ -84,17 +91,48 @@ nav{
   height: 100vh;
   padding: 5vh;
   display: grid;
-  grid-template-columns: 80px 80px 80px;
+  grid-template-columns: 1fr 80px 80px 80px;
   grid-auto-rows: 58vh;
   grid-template-areas:
-  "in be ig"
+  "sd in be ig"
   ;
 }
+
+#ScrollDown {
+  grid-area: sd;
+}
+
+
+.sd {
+  background-color: #31C5F4;
+  padding-left: 16px;
+  padding-right: 16px;
+  border: none;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 50px;
+  height: 50px;
+  transition: 0.3s;
+  padding-top: 0;
+}
+
+.sd:hover {
+  background-color: #89E3FF;
+ 
+}
+
+.sd a {
+  text-decoration: none;
+  color: #000f50;
+}
+
 
 #LinkedIn {
   grid-area: in;
 
 }
+
 #Behance {
   grid-area: be;
 
@@ -104,8 +142,23 @@ nav{
 
 }
 
+h4 {
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 700;
+  color: #000f50;
+  margin: auto;
+  padding: 10px;
+  
+}
 
-
+#section2 h2 {
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 700;
+  color: #000f50;
+  
+}
 
 
 
@@ -174,8 +227,8 @@ nav{
   line-height: 22px;
   margin: 0px 5%;
   display: grid;
-  padding-top: 100px;
-  padding-bottom: 50px;
+  padding-top: 24px;
+  padding-bottom: 18px;
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 58vh;
   grid-template-areas:
@@ -189,7 +242,7 @@ nav{
 
 #Project1 {
   grid-area: project1;
-  background-image: url("../images/logo w background.png");
+  background-image: url("../images/whimsy.jpg");
 
 }
 #Project2 {
@@ -248,12 +301,11 @@ nav{
 }
 
 .heading {
-  background-color: rgba(255,255,255,0.8);
+
   padding: 15px;
   height: 25px;
   color: #000f50;
   font-size: 18px;
-  border-bottom: 5px solid #31C5F4;
   font-weight: 500;
 }
 
