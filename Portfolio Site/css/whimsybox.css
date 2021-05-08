@@ -1,0 +1,35 @@
+.jumbotron {
+  background-color: #0B1331;
+  color: white;
+  height: calc(100vh - 130px);
+  display: flex;
+  align-items: top;
+  justify-content: center;
+}
+
+.col-5 {
+  color: white;
+  background-image: url("../images/wb-cover.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 40vh;
+}
+
+.container h3 {
+  color: #31C5F4;
+}
+
+.col-7 {
+  height: 40vh;
+}
+
+h2 {
+  color: #FF3900;
+}
+
+#research,#prototyping,#identity,#takaways {
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-top: 5vw;
+}
